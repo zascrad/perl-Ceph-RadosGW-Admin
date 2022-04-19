@@ -24,7 +24,7 @@ has max_buckets  => (is => 'rw', required => 1, isa => 'Int');
 has subusers     => (is => 'rw', required => 1, isa => 'ArrayRef[Ceph::RadosGW::Admin::User]');
 has keys         => (is => 'rw', required => 1, isa => 'ArrayRef[HashRef[Str]]');
 has swift_keys   => (is => 'rw', required => 1, isa => 'ArrayRef[Str]');
-has caps         => (is => 'rw', required => 1, isa => 'ArrayRef[Str]');
+has caps         => (is => 'rw', required => 1, isa => 'ArrayRef[HashRef[Str]]');
 has _client      => (is => 'ro', required => 1, isa => 'Ceph::RadosGW::Admin');
 
 __PACKAGE__->meta->make_immutable;
